@@ -1,0 +1,812 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 130vh;
+    width: 100%;
+    height: 100vh;
+    background: url('Images/Group 7.png') no-repeat center center / cover;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    height: 100%;
+}
+
+/* Add this animation to your CSS file */
+@keyframes slide-down {
+    from {
+        transform: translateY(-100px); /* Start from 100px above its position */
+        opacity: 0; /* Start with invisible logo */
+    }
+    to {
+        transform: translateY(0); /* End at its current position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply the animation to the logo */
+.logo {
+    animation: slide-down 2s ease-out forwards; /* Apply animation with 1s duration */
+}
+
+/* Slide-in text animation */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text-section h1 {
+    font-size: 96px;
+    color: #4b2a82;
+    line-height: 1.0;
+    margin: 0;
+    animation: slide-in 2s ease-out; /* Applying the slide-in effect */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.text-section p {
+    font-size: 20px;
+    color: #095d7ea0;
+    animation: slide-up 1s ease-out;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #095d7ea0;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: #095d7e;
+}
+
+/* Buttons */
+.login-btn {
+    width: 153px;
+    height: 39px;
+    background-color: #333333a1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #095D7E;
+}
+
+.appointment-btn {
+    width: 250px;
+    height: 39px;
+    background-color: #33333361;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: slide-up 2s ease-out;
+}
+
+.appointment-btn:hover {
+    background-color: #095D7E;
+}
+
+/* General Styling for About Us section */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #ffffff;
+}
+
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image-container {
+    max-width: 50%;
+    margin-top: -60px;  /* Move the image upwards */
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: -100px;
+    margin-bottom: -30px;
+}
+
+.content-container {
+    flex: 1;
+    padding-left: 40px;
+    margin-top: -100px;  /* Move the text upwards */
+}
+
+.section-title {
+    font-size: 64px;
+    color: #095D7E;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 20px;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+.learn-more {
+    font-size: 18px;
+    color: #095D7E;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: block;
+    margin-top: -60px;
+}
+
+.learn-more:hover {
+    color: #095D7E;
+    text-decoration: underline;
+}
+
+/* Slide-in Animations */
+.slide-in-left,
+.slide-in-top,
+.slide-in-bottom {
+    opacity: 0;
+    transition: transform 2s ease, opacity 1s ease;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+}
+
+.slide-in-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-top {
+    transform: translateY(-100%);
+}
+
+.slide-in-top.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-bottom {
+    transform: translateY(100%);
+}
+
+.slide-in-bottom.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles for the Services Section */
+
+.services-section {
+    text-align: center;
+    padding: 100px 50px;
+    background-color: #ffffff;
+}
+
+.services-title {
+    font-size: 64px;
+    color: #4F378B;
+    margin-bottom: 30px;
+    margin-top: -60px;
+    font-weight: bolder;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.service-card {
+    background: linear-gradient(145deg, #e1f0fa, #d3eaf3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 290px;
+    height: 310px;
+    margin: auto;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 10px;
+}
+
+/* Adjustments for the hexagonal layout */
+.services-container div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+.services-container div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+.services-container div:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+.services-container div:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1;
+}
+.services-container div:nth-child(5) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+.services-container div:nth-child(6) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+.services-container div:nth-child(7) {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+}
+
+.service-card:nth-child(1) {
+    background: #83B1A9;
+}
+
+.service-card:nth-child(2) {
+    background: #93C9DE;
+}
+
+.service-card:nth-child(3) {
+    background: #CCECEE;
+}
+
+.service-card:nth-child(4) {
+    background: #e9f5ff;
+}
+
+.service-card:nth-child(5) {
+    background: #CCECEE;
+}
+
+.service-card:nth-child(6) {
+    background: #e9f5ff;
+}
+
+.service-card:nth-child(7) {
+    background: #93C9DE;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Hover effect with specific images */
+.service-card:nth-child(1):hover {
+    background-image: url('Images/1H.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:nth-child(2):hover {
+    background-image: url('Images/2H.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:nth-child(3):hover {
+    background-image: url('Images/3H.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:nth-child(4):hover {
+    background-image: url('Images/4H.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:nth-child(5):hover {
+    background-image: url('Images/5H.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:nth-child(6):hover {
+    background-image: url('Images/6H.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:nth-child(7):hover {
+    background-image: url('Images/7H.jpg');
+    opacity: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .service-card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-title {
+        font-size: 1.5rem;
+    }
+
+    .service-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Styles for the Doctors Section */
+.doctors-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 74px 42px 0 42px;
+    background-color: #ffffff;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.doctors-content {
+    max-width: 50%;
+}
+
+/* Title */
+.doctors-title {
+    font-size: 2.5rem;
+    color: #4F378B;
+    font-weight: bolder;
+    margin-bottom: 74px;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Description */
+.doctors-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.book-appointment-btn {
+    background-color: rgba(0, 0, 0, 0.455);
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.book-appointment-btn:hover {
+    background-color: #095d7e;
+}
+
+/* Carousel */
+.doctors-carousel {
+    display: flex;
+    gap: 60px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.doctors-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Doctor Card */
+.doctor-card {
+    width: 257px;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.doctor-img {
+    width: 257px;
+    height: 236px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.doctor-name {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.doctor-specialty {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* View All card styling */
+.view-all-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 257px;
+    height: 316px;
+    background-color: #ffffff;
+    border: 2px dashed #ffffff;
+    border-radius: 8px;
+}
+
+.view-all-card:hover {
+    transform: scale(1.05);
+}
+
+.view-all-img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Animation Classes */
+.animate-title {
+    animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+.animate-description {
+    animation: slideInFromBottom 1.2s ease-out 0.3s forwards;
+}
+
+.animate-button {
+    animation: slideInFromBottom 1.2s ease-out 0.5s forwards;
+}
+
+.animate-carousel {
+    animation: carouselSlideIn 1.5s ease-out forwards;
+}
+
+/* Title Animation */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Description and Button Animation */
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Carousel Animation */
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        gap: 60px;
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        gap: 53px;
+        opacity: 1;
+    }
+}
+
+/* Styles for testimonial section */
+.testimonial-section {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 62px;
+    padding-left: 53px;
+    gap: 50px;
+    padding-bottom: 160px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.testimonial-text {
+    width: 40%;
+}
+
+.testimonial-text.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.testimonial-text h2 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #204e7a;
+    margin: 0;
+}
+  
+.testimonial-carousel {
+    padding-left: 10px;
+    padding-right: 50px;
+    display: flex;
+    gap: 100px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    width: auto;
+    height: 300px;
+    cursor: grab;
+    transform: translateY(-100%);
+    opacity: 0; /* Initially invisible */
+}
+  
+.testimonial-carousel::-webkit-scrollbar {
+    display: none;
+}
+  
+
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    border-radius: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 257px;
+    height: 197px;
+    flex: 0 0 auto;
+}
+  
+  /* Card Content (Left Side) */
+.card-content {
+    flex: 1;
+}
+  
+.card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+  
+.stars {
+    font-size: 16px;
+    color: #ffa500;
+}
+  
+.card-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-left: 15px;
+    margin-right: -70px;
+    margin-bottom: 50px;
+}
+
+.testimonial-section:hover .testimonial-text {
+    transform: translateX(0); /* Slide the text to the original position */
+    opacity: 1; /* Fade in the text */
+}
+  
+.testimonial-section:hover .testimonial-carousel {
+    transform: translateY(0); /* Slide the carousel to the original position */
+    opacity: 1; /* Fade in the carousel */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #095D7E;
+    color: white;
+    padding: 40px 20px;
+    height: 250px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    margin: 30px;
+  }
+  
+  .contact-info, .footer-links, .social-media {
+    flex: 1;
+  }
+  
+  .contact-info h3, .footer-links h3, .social-media h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 8px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .social-icon:hover {
+    text-decoration: underline;
+  }
+
